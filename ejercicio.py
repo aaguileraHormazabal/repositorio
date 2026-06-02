@@ -10,8 +10,17 @@ for i in range(3):
         else:
             print("El nombre tiene que tener mas de 3 letras")
             
+longitud_maxima = max(len(nombre) for nombre in nombres)
 
-nombre_mayor= max(nombres, key=len)
+ganadores = [nombre for nombre in nombres if len(nombre) == longitud_maxima]
 
-print(f"el nombre mayor es :{nombre_mayor} y tiene {len(nombre_mayor)} caracteres")
+for nombre in ganadores:
+    print(f"Ganador: {nombre}")
+
+
+    
+
+#print(f"longotud_max {longitud_maxima}")
+#nombre_mayor= max(nombres, key=len)
+#print(f"el nombre mayor es :{nombre_mayor} y tiene {len(nombre_mayor)} caracteres")
 
